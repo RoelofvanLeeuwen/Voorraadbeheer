@@ -1,0 +1,105 @@
+@inherits LayoutComponentBase
+
+<div class="gc-shell">
+    <header class="gc-appbar">
+        <div class="gc-appbar-inner">
+            <div class="gc-brand">
+                <button class="gc-iconbtn gc-hamburger" aria-label="Menu" @onclick="ToggleDrawer">
+                    <Icon Name="@(_drawerOpen ? "close" : "menu")" Size="22" />
+                </button>
+                <a class="gc-logo" href="/">
+                    <span class="gc-logo-mark" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="var(--gc-primary)" />
+                            <path d="M10 9v14M10 9h8a5 5 0 0 1 0 10h-3v4" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="gc-logo-text">
+                        <span class="gc-logo-org">Graafschap</span>
+                        <span class="gc-logo-sub">Voorraadbeheer</span>
+                    </span>
+                </a>
+            </div>
+
+            <nav class="gc-nav">
+                <NavMenu />
+            </nav>
+
+            <div class="gc-appbar-actions">
+                <div class="gc-avatar" title="R. van Leeuwen">RvL</div>
+            </div>
+        </div>
+    </header>
+
+    @if (_drawerOpen)
+    {
+        <div class="gc-scrim" @onclick="ToggleDrawer"></div>
+        <aside class="gc-drawer">
+            <div class="gc-drawer-head">
+                <div class="gc-logo">
+                    <span class="gc-logo-mark" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="var(--gc-primary)" />
+                            <path d="M10 9v14M10 9h8a5 5 0 0 1 0 10h-3v4" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="gc-logo-text">
+                        <span class="gc-logo-org">Graafschap</span>
+                        <span class="gc-logo-sub">Voorraadbeheer</span>
+                    </span>
+                </div>
+                <button class="gc-iconbtn" aria-label="Sluiten" @onclick="ToggleDrawer">
+                    <Icon Name="close" Size="20" />
+                </button>
+            </div>
+            <nav class="gc-drawer-nav">
+                <NavLink class="gc-drawer-link" href="/" Match="NavLinkMatch.All" ActiveClass="is-active" @onclick="CloseDrawer">
+                    <span class="gc-drawer-ico"><Icon Name="home" Size="20" /></span>
+                    <span>Dashboard</span>
+                </NavLink>
+                <NavLink class="gc-drawer-link" href="/artikelen" ActiveClass="is-active" @onclick="CloseDrawer">
+                    <span class="gc-drawer-ico"><Icon Name="table" Size="20" /></span>
+                    <span>Artikelen</span>
+                </NavLink>
+                <NavLink class="gc-drawer-link" href="/projecten" ActiveClass="is-active" @onclick="CloseDrawer">
+                    <span class="gc-drawer-ico"><Icon Name="sparkle" Size="20" /></span>
+                    <span>Projecten</span>
+                </NavLink>
+                <NavLink class="gc-drawer-link" href="/uitleningen" ActiveClass="is-active" @onclick="CloseDrawer">
+                    <span class="gc-drawer-ico"><Icon Name="arrow" Size="20" /></span>
+                    <span>Uitleningen</span>
+                </NavLink>
+                <NavLink class="gc-drawer-link" href="/categorieen" ActiveClass="is-active" @onclick="CloseDrawer">
+                    <span class="gc-drawer-ico"><Icon Name="counter" Size="20" /></span>
+                    <span>Categorieën</span>
+                </NavLink>
+            </nav>
+            <div class="gc-drawer-foot">
+                <div class="gc-avatar" style="width: 36px; height: 36px;">RvL</div>
+                <div>
+                    <div class="gc-drawer-user">R. van Leeuwen</div>
+                    <div class="gc-drawer-role">Eigenaar</div>
+                </div>
+            </div>
+        </aside>
+    }
+
+    <main class="gc-main">
+        <article>
+            @Body
+        </article>
+    </main>
+</div>
+
+<div id="blazor-error-ui" data-nosnippet>
+    Er is een onverwachte fout opgetreden.
+    <a href="." class="reload">Herladen</a>
+    <span class="dismiss">&#10005;</span>
+</div>
+
+@code {
+    private bool _drawerOpen;
+
+    private void ToggleDrawer() => _drawerOpen = !_drawerOpen;
+    private void CloseDrawer() => _drawerOpen = false;
+}

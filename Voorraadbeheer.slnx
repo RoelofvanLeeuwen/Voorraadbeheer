@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Voorraadbeheer.Application/Voorraadbeheer.Application.csproj" />
+    <Project Path="src/Voorraadbeheer.Core/Voorraadbeheer.Core.csproj" />
+    <Project Path="src/Voorraadbeheer.Infrastructure/Voorraadbeheer.Infrastructure.csproj" />
+    <Project Path="src/Voorraadbeheer.Web/Voorraadbeheer.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Voorraadbeheer.Application.Tests/Voorraadbeheer.Application.Tests.csproj" />
+    <Project Path="tests/Voorraadbeheer.Core.Tests/Voorraadbeheer.Core.Tests.csproj" />
+    <Project Path="tests/Voorraadbeheer.Infrastructure.Tests/Voorraadbeheer.Infrastructure.Tests.csproj" />
+  </Folder>
+</Solution>

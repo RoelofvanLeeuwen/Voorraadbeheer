@@ -1,0 +1,78 @@
+@page "/"
+
+<PageTitle>Dashboard — Voorraadbeheer</PageTitle>
+
+<div class="gc-pageheader">
+    <div>
+        <div class="gc-eyebrow">Welkom</div>
+        <h1 class="gc-h1">Voorraadbeheer Schuur</h1>
+        <p class="gc-sub">Beheer je materialen, projecten en uitleningen.</p>
+    </div>
+</div>
+
+<div class="gc-grid gc-grid-3">
+    <div class="gc-stat">
+        <div class="gc-stat-label">Artikelen</div>
+        <div class="gc-stat-value">—</div>
+        <div class="gc-stat-delta">Nog geen data</div>
+    </div>
+    <div class="gc-stat">
+        <div class="gc-stat-label">Actieve projecten</div>
+        <div class="gc-stat-value">—</div>
+        <div class="gc-stat-delta">Nog geen data</div>
+    </div>
+    <div class="gc-stat">
+        <div class="gc-stat-label">Openstaande uitleningen</div>
+        <div class="gc-stat-value">—</div>
+        <div class="gc-stat-delta">Nog geen data</div>
+    </div>
+</div>
+
+<div class="gc-grid gc-grid-2" style="margin-top: 24px;">
+    <div class="gc-card">
+        <div class="gc-card-head">
+            <div>
+                <div class="gc-card-title">Snel naar</div>
+                <div class="gc-card-sub">Veelgebruikte onderdelen</div>
+            </div>
+        </div>
+        <div class="gc-card-body">
+            <ul class="gc-actionlist">
+                <li>
+                    <span><Icon Name="table" Size="16" /></span>
+                    <a href="/artikelen" style="flex:1; text-decoration:none; color:inherit;">Alle artikelen</a>
+                    <Icon Name="arrow" Size="16" />
+                </li>
+                <li>
+                    <span><Icon Name="sparkle" Size="16" /></span>
+                    <a href="/projecten" style="flex:1; text-decoration:none; color:inherit;">Projecten</a>
+                    <Icon Name="arrow" Size="16" />
+                </li>
+                <li>
+                    <span><Icon Name="arrow" Size="16" /></span>
+                    <a href="/uitleningen" style="flex:1; text-decoration:none; color:inherit;">Uitleningen</a>
+                    <Icon Name="arrow" Size="16" />
+                </li>
+                <li>
+                    <span><Icon Name="counter" Size="16" /></span>
+                    <a href="/categorieen" style="flex:1; text-decoration:none; color:inherit;">Categorieën</a>
+                    <Icon Name="arrow" Size="16" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="gc-card">
+        <div class="gc-card-head">
+            <div>
+                <div class="gc-card-title">Aandachtspunten</div>
+                <div class="gc-card-sub">Tekorten en openstaande uitleningen</div>
+            </div>
+        </div>
+        <div class="gc-card-body">
+            <div class="gc-empty">
+                <div class="gc-empty-title">Alles in orde</div>
+                <div class="gc-empty-sub">Geen tekorten of openstaande meldingen.</div>
+            </div>
+        </div>
+    </div>
+</div>

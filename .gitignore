@@ -1,0 +1,31 @@
+## .NET
+bin/
+obj/
+*.user
+.vs/
+*.suo
+*.db
+*.db-shm
+*.db-wal
+
+## dotnet tool cache
+.dotnet/
+.tools/
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/packages/
+packages/
+!**/[Pp]ackages/repositories.config
+
+## OS
+.DS_Store
+Thumbs.db
